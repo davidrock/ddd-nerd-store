@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NerdStore.Catalog.Domain
 {
-    public interface IInventoryService : IDisposable
+    public interface IStockService : IDisposable
     {
         Task<bool> CreditStock(Guid productId, int quantity);
         Task<bool> DebitStock(Guid productId, int quantity);
