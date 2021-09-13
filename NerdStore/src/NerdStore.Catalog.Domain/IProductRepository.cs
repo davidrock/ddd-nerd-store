@@ -9,7 +9,7 @@ namespace NerdStore.Catalog.Domain
     {
         Task<IEnumerable<Product>> GetAll();
         Task<Product> GetById(Guid id);
-        Task<IEnumerable<Product>> GetByCategoryId(Guid id);
+        Task<IEnumerable<Product>> GetByCategoryCode(int code);
         Task<IEnumerable<Category>> GetCategories();
 
         void Add(Product product);

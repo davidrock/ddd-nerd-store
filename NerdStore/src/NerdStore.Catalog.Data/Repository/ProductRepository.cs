@@ -25,9 +25,9 @@ namespace NerdStore.Catalog.Data.Repository
             return await _context.Products.AsNoTracking().ToListAsync();
         }
 
-        public async Task<IEnumerable<Product>> GetByCategoryId(Guid id)
+        public async Task<IEnumerable<Product>> GetByCategoryCode(int code)
         {
-            return await _context.Products.AsNoTracking().Include(x => x.Category).Where(x => x.CategoryId == id).ToListAsync();
+            return await _context.Products.AsNoTracking().Include(x => x.Category).Where(x => x.Category.Code == code).ToListAsync();
         }
 
         public async Task<Product> GetById(Guid id)
