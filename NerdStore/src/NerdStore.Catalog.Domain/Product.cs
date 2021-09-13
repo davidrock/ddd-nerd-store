@@ -17,6 +17,8 @@ namespace NerdStore.Catalog.Domain
         public Category Category { get; private set; }
         public Dimensions Dimensions { get; private set; }
 
+        protected Product() { }
+
         public Product(string name, string description, bool active, decimal price, Guid categoryId, string imageUrl, Dimensions dimensions, DateTime createdAt)
         {
             Name = name.Trim();

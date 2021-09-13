@@ -70,7 +70,7 @@ namespace NerdStore.Catalog.Application.Services
 
         public async Task<ProductViewModel> GetById(Guid id)
         {
-            return _mapper.Map<IEnumerable<ProductViewModel>>(await _productRepository.GetById(id);
+            return _mapper.Map<ProductViewModel>(await _productRepository.GetById(id));
         }
 
         public async Task<IEnumerable<ProductViewModel>> GetCategories()
